@@ -1,0 +1,10 @@
+insert into employee(firstName, middleInitial,lastName,dateOfBirth,dateOfEmployment,isActive,createdDate, lastUpdatedDate,updatedBy) 
+values('Thomas','J','Zuno',TO_DATE('1980-02-14', 'YYYY-MM-DD'),TO_DATE('2019-01-02', 'YYYY-MM-DD'),true ,sysdate(), sysdate(),'Carlos');
+insert into employee(firstName, middleInitial,lastName,dateOfBirth,dateOfEmployment,isActive,createdDate, lastUpdatedDate,updatedBy) 
+values('Jonh','M','Smith',TO_DATE('1981-03-15', 'YYYY-MM-DD'),TO_DATE('2017-02-04', 'YYYY-MM-DD'),true, sysdate(), sysdate(),'Carlos');
+insert into employee(firstName, middleInitial,lastName,dateOfBirth,dateOfEmployment,isActive,createdDate, lastUpdatedDate,updatedBy) 
+values('Samuel','L','Jackson',TO_DATE('1968-09-10', 'YYYY-MM-DD'),TO_DATE('2010-01-04', 'YYYY-MM-DD'), true,sysdate(), sysdate(),'Carlos');
+insert into employee(firstName, middleInitial,lastName,dateOfBirth,dateOfEmployment,isActive,createdDate, lastUpdatedDate,updatedBy) 
+values('Cristal','P','Martinez',TO_DATE('1990-11-10', 'YYYY-MM-DD'),TO_DATE('2018-05-04', 'YYYY-MM-DD'), true,sysdate(), sysdate(),'Carlos');
+insert into employee(firstName, middleInitial,lastName,dateOfBirth,dateOfEmployment,isActive,createdDate, lastUpdatedDate,updatedBy) 
+values('Karen','Y','Medina',TO_DATE('1979-08-06', 'YYYY-MM-DD'),TO_DATE('2004-08-15', 'YYYY-MM-DD'), true,sysdate(), sysdate(),'Carlos');
