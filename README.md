@@ -75,8 +75,6 @@ http://localhost:8080/employees/1 \\
 
 Update Employee
 
-{\"id\":1,\"firstName\":\"Thomas\",\"middleInitial\":\"J\",\"lastName\":\"Zuno\",\"dateOfBirth\":\"1980-02-14\",\"dateOfEmployment\":\"2019-01-02\",\"status\":\"ACTIVE\"}
-
 curl -X PUT \\
 
 http://localhost:8080/employees/1 \\
@@ -122,10 +120,10 @@ http://localhost:8080/employees/ \\
 
 Delete Employee
 
-Note:
+***Note:***
 
 In Postman you can send the request with Basic Auth and user name =
-user, pasword:password
+user, pasword=password
 
 curl -X DELETE \\
 
@@ -140,6 +138,3 @@ http://localhost:8080/employees/3 \\
 -H \'Postman-Token: e7dba0ec-2d3e-4c90-a10b-85ef95fc0e87\' \\
 
 -H \'cache-control: no-cache\'
-
-
-Author: Carlos Matus
