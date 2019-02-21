@@ -1,7 +1,6 @@
 package com.cm.kenzan.controller;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import java.nio.charset.Charset;
 import java.util.Arrays;
@@ -9,16 +8,24 @@ import java.util.Arrays;
 import org.json.JSONException;
 import org.junit.Before;
 import org.junit.Test;
-import org.skyscreamer.jsonassert.JSONAssert;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import java.util.Base64;
+import org.springframework.test.context.junit4.SpringRunner;
 
-public class EmployeeAuthTest {
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
+public class EmployeeAuthTest  {
+	@LocalServerPort
+    private int port;
 	TestRestTemplate restTemplate = new TestRestTemplate();
 
 	HttpHeaders headers = new HttpHeaders();
@@ -48,7 +55,7 @@ public class EmployeeAuthTest {
 
 
 	private String createURLWithPort(String uri) {
-		return "http://localhost:8080"  + uri;
+		return "http://localhost:"+port  + uri;
 	}
 
 	private String createHttpAuthenticationHeaderValue(String userId,
